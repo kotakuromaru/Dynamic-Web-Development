@@ -15,6 +15,9 @@
         margin-left: 10px;
         margin-rigth: 10px;
       }
+      #main {
+        align-items: center;
+      }
       #num1 {
         width: 100px;
         height: 100px;
@@ -46,41 +49,45 @@
   </head>
   <body>
 
-    <h1>Micro 04: Simple Calculator</h1>
+    <div id="main">
+      <h1>Simple Calculator</h1>
 
-    <div id="container">
-
-      <!-- Input: First Number -->
-      <div class="form">
-        <input type="text" id="num1">
+      <div id="container">
+  
+        <!-- Input: First Number -->
+        <div class="form">
+          <input type="text" id="num1">
+        </div>
+  
+        <!-- Dropdown: Operation Selector -->
+        <div class="form">
+          <select id="operator">
+            <option value="a" selected>+</option>
+            <option value="s">-</option>
+            <option value="m">*</option>
+            <option value="d">/</option>
+          </select>
+        </div>
+  
+        <!-- Input: Second Number -->
+        <div class="form">
+          <input type="text" id="num2">
+        </div>
+  
+        <!-- Button: Equals (submit form) -->
+        <div class="form">
+          <button id="process">=</button>
+        </div>
+  
+        <!-- Text: Result -->
+        <div class="form">
+          <span id="result">?</span>
+        </div>
+  
       </div>
-
-      <!-- Dropdown: Operation Selector -->
-      <div class="form">
-        <select id="operator">
-          <option value="a" selected>+</option>
-          <option value="s">-</option>
-          <option value="m">*</option>
-          <option value="d">/</option>
-        </select>
-      </div>
-
-      <!-- Input: Second Number -->
-      <div class="form">
-        <input type="text" id="num2">
-      </div>
-
-      <!-- Button: Equals (submit form) -->
-      <div class="form">
-        <button id="process">=</button>
-      </div>
-
-      <!-- Text: Result -->
-      <div class="form">
-        <span id="result">?</span>
-      </div>
-
+      
     </div>
+    
 
     <script>
 
