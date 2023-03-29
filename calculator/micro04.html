@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Micro 04</title>
+    <meta charset="utf-8">
+    <style>
+      #container {
+        position: relative
+      }
+      .form {
+        box-sizing: border-box;
+        float: left;
+        position: relative;
+        margin-left: 10px;
+        margin-rigth: 10px;
+      }
+      #num1 {
+        width: 100px;
+        height: 100px;
+        font-size: 200%;
+        text-align: center;
+      }
+      #num2 {
+        width: 100px;
+        height: 100px;
+        font-size: 200%;
+        text-align: center;
+      }
+      #operator {
+        position: relative;
+        top: 40px;
+      }
+      #process {
+        position: relative;
+        top: 40px;
+      }
+      #result {
+        position: relative;
+        top: 30px;
+        left: 40px;
+        font-size: 200%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Micro 04: Simple Calculator</h1>
+
+    <div id="container">
+
+      <!-- Input: First Number -->
+      <div class="form">
+        <input type="text" id="num1">
+      </div>
+
+      <!-- Dropdown: Operation Selector -->
+      <div class="form">
+        <select id="operator">
+          <option value="a" selected>+</option>
+          <option value="s">-</option>
+          <option value="m">*</option>
+          <option value="d">/</option>
+        </select>
+      </div>
+
+      <!-- Input: Second Number -->
+      <div class="form">
+        <input type="text" id="num2">
+      </div>
+
+      <!-- Button: Equals (submit form) -->
+      <div class="form">
+        <button id="process">=</button>
+      </div>
+
+      <!-- Text: Result -->
+      <div class="form">
+        <span id="result">?</span>
+      </div>
+
+    </div>
+
+    <script>
+
+      // get a ref to the nums
+      let num1 = document.getElementById('num1');
+      let num2 = document.getElementById('num2');
+
+      // get a ref to the operator
+      let operator = document.getElementById('operator');
+
+      // get a ref to the button
+      let btn = document.getElementById('process');
+
+      // get a ref to the result
+      let result = document.getElementById('result');
+
+      // wire up an event listener to the button
+      btn.onclick = function(event) {
+        // addition
+        if (operator.value == "a") {
+          result.innerText = parseInt(num1.value) + parseInt(num2.value);
+        }
+        // subtraction
+        else if (operator.value == "s") {
+          result.innerText = parseInt(num1.value) - parseInt(num2.value);
+        }
+        // multiplication
+        else if (operator.value == "m") {
+          result.innerText = parseInt(num1.value) * parseInt(num2.value);
+        }
+        // division
+        else if (operator.value == "d") {
+          result.innerText = parseInt(num1.value) / parseInt(num2.value);
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
