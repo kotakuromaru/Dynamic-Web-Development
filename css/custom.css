@@ -1,0 +1,53 @@
+@font-face {
+  font-family: myHeaderFont;
+  src: url(../fonts/chakra.ttf);
+}
+
+@font-face {
+  font-family: myParagraphFont;
+  src: url(../fonts/opensans.ttf);
+}
+
+.otherSites ul p{
+  font-family: myParagraphFont;
+  margin: 50px;
+  margin-top: 10px;
+  font-size: 18pt;
+  /* text-align: center; */
+}
+
+.otherSites ul {
+  text-decoration: none;
+  list-style: none;
+
+}
+
+.otherSites ul li{
+  margin: 50px;
+  margin-bottom: 0px;
+  font-size: 48pt;
+  /* text-align: center; */
+}
+
+.otherSites ul a:hover {
+  color : grey;
+}
+
+ul a:link{
+  color : rgba(30,70,60,1);
+  text-decoration : none;
+  font-family : myHeaderFont;
+}
+
+ul a:visited{
+  color : rgba(70,160,150,1);
+}
+
+ul a:active{
+  color : rgba(40,180,240,1);
+}
+
+ul a:focus{
+  background : yellow;
+  outline : none;
+}
